@@ -3,7 +3,7 @@
 Landing site for **Northstar**, a Roblox PvP game in development where four rival
 factions fight over one shared treasury.
 
-Live: https://northstar112.github.io/NAVAX/
+Live: https://liamtoofake.github.io/NAVAX-WORK/
 
 ## Editing the text
 
@@ -22,6 +22,9 @@ npm run build   # writes the published site into docs/
 
 GitHub Pages serves the committed `docs/` folder on `main`
 (Settings → Pages → Source: *Deploy from a branch*, Branch: `main` / `docs`).
+
+Asset paths are relative, so the same build works from any repo name — no config
+change needed when this is forked.
 
 So to publish a change:
 
