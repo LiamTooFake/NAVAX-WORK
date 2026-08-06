@@ -1,50 +1,41 @@
 # Northstar
 
-Landing site for **Northstar**, a Roblox PvP game in development where four rival
-factions fight over one shared treasury.
+Site for Northstar, a Roblox PvP game in development. Four factions, one shared
+treasury, whoever's holding the most when the cycle ends comes out ahead.
 
-Live: https://liamtoofake.github.io/NAVAX-WORK/
+https://liamtoofake.github.io/NAVAX-WORK/
 
-## Editing the text
+## Changing the text
 
-All copy lives in one file: [`src/content.js`](src/content.js). Change it there and
-it updates everywhere on the page — you never need to open the components.
+Everything you'd want to reword lives in `src/content.js` — headings, body copy,
+the stat numbers, the Discord link. Edit it there rather than digging through the
+components.
 
-## Working on it locally
+## Running it locally
 
-```bash
-npm install     # once
-npm run dev     # local dev server with hot reload
-npm run build   # writes the published site into docs/
+```
+npm install
+npm run dev
 ```
 
-## Deploying
+## Publishing
 
-GitHub Pages serves the committed `docs/` folder on `main`
-(Settings → Pages → Source: *Deploy from a branch*, Branch: `main` / `docs`).
+`npm run build` writes the finished site into `docs/`, and Pages serves `docs/`
+off `main`. So a deploy is just:
 
-Asset paths are relative, so the same build works from any repo name — no config
-change needed when this is forked.
-
-So to publish a change:
-
-```bash
+```
 npm run build
 git add -A
-git commit -m "Update site"
+git commit -m "whatever changed"
 git push
 ```
 
-The live site refreshes about a minute later.
+Give it a minute to show up.
 
-## Layout
+Don't hand-edit anything in `docs/` — the next build overwrites it.
 
-| Path | What it is |
-| --- | --- |
-| `src/content.js` | Every piece of text on the site |
-| `src/components/` | React components, each with its own CSS file |
-| `src/hooks/` | Scroll, reveal, count-up and pointer-glow behaviour |
-| `src/styles/` | Design tokens and global styles |
-| `docs/` | Build output — generated, don't edit by hand |
+## Notes
 
-Built with React and Vite. Hero photograph by SnapSaga on Unsplash.
+Asset paths are relative, so this keeps working if the repo gets renamed or
+forked again. React + Vite, no other dependencies. Hero photo by SnapSaga on
+Unsplash.
